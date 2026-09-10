@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="description" content="Support for Mareo — a general reminder and tracking app that runs on your device.">
+<title>Support — Mareo</title>
+<style>
+  :root{
+    --bg:#f5f6f8;
+    --page:#ffffff;
+    --ink:#1c2530;
+    --ink-soft:#5a6573;
+    --ink-faint:#8a929e;
+    --accent:#2f6fb0;
+    --accent-soft:#eaf1f9;
+    --line:#e3e7ec;
+    --line-soft:#eef1f4;
+    --note-bg:#f7f9fb;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; padding:0;
+    background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65; font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{
+    max-width:760px; margin:0 auto; padding:0 22px 80px;
+  }
+  /* ---- Header ---- */
+  header.hero{
+    background:var(--page);
+    border-bottom:1px solid var(--line);
+    text-align:center;
+    padding:54px 22px 40px;
+  }
+  header.hero .brand{
+    display:inline-block;
+    font-size:0.78rem; font-weight:600; letter-spacing:1.4px;
+    text-transform:uppercase; color:var(--accent);
+    background:var(--accent-soft);
+    padding:5px 14px; border-radius:20px;
+    margin-bottom:18px;
+  }
+  header.hero h1{
+    font-size:2rem; margin:0 0 10px; letter-spacing:.2px; line-height:1.2;
+  }
+  header.hero .app-label{
+    color:var(--ink-soft); font-size:1rem; margin:0 0 6px;
+  }
+  header.hero .effective{
+    color:var(--ink-faint); font-size:0.85rem; letter-spacing:.3px; margin:0;
+  }
+  /* ---- Card ---- */
+  .card{
+    background:var(--page);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    margin-top:30px;
+    padding:14px 30px 34px;
+    box-shadow:0 1px 2px rgba(20,30,45,.04);
+  }
+  /* ---- Intro note ---- */
+  .intro-note{
+    background:var(--note-bg);
+    border:1px solid var(--line);
+    border-left:4px solid var(--accent);
+    border-radius:10px;
+    padding:14px 18px;
+    margin:22px 0 8px;
+    font-size:0.94rem;
+    color:var(--ink-soft);
+  }
+  /* ---- TOC ---- */
+  nav.toc{
+    margin:24px 0 4px;
+    padding:18px 22px;
+    background:var(--note-bg);
+    border:1px solid var(--line-soft);
+    border-radius:10px;
+  }
+  nav.toc h2{
+    font-size:0.78rem; text-transform:uppercase; letter-spacing:1px;
+    color:var(--ink-faint); margin:0 0 10px; font-weight:700;
+  }
+  nav.toc ol{
+    margin:0; padding-left:22px;
+    columns:2; column-gap:30px;
+  }
+  nav.toc li{margin:4px 0; break-inside:avoid; font-size:0.9rem;}
+  nav.toc a{color:var(--ink-soft);}
+  nav.toc a:hover{color:var(--accent);}
+  /* ---- Sections ---- */
+  section.sec{
+    padding:26px 0 4px;
+    border-top:1px solid var(--line-soft);
+    scroll-margin-top:20px;
+  }
+  section.sec:first-of-type{border-top:none;}
+  section.sec h2.sec-title{
+    font-size:1.18rem; margin:0 0 10px; color:var(--ink);
+    line-height:1.35;
+  }
+  section.sec h2.sec-title .num{
+    color:var(--accent); font-weight:700; margin-right:8px;
+  }
+  /* A question inside a section. Same type scale as the sibling pages; the only
+     addition this page makes to their stylesheet, because it is the only page
+     that carries a question-and-answer list. */
+  section.sec h3.q{
+    font-size:1rem; margin:20px 0 6px; color:var(--ink);
+    line-height:1.45; font-weight:600;
+  }
+  section.sec h3.q:first-of-type{margin-top:6px;}
+  section.sec p{
+    margin:0 0 12px; color:var(--ink-soft); font-size:0.97rem;
+  }
+  section.sec p:last-child{margin-bottom:0;}
+  section.sec p.legal-caps{
+    font-size:0.92rem; color:var(--ink); line-height:1.7;
+  }
+  .contact-block{
+    background:var(--note-bg);
+    border:1px solid var(--line-soft);
+    border-radius:10px;
+    padding:16px 18px;
+    margin-top:6px;
+    font-size:0.95rem;
+    line-height:1.8;
+    color:var(--ink-soft);
+    white-space:pre-line;
+  }
+  /* Deliberately conspicuous: an unfinished contact route must be visible to
+     whoever opens the page, not hidden in a comment where it can ship unnoticed. */
+  .pending{
+    color:#8a4b00;
+    background:#fff5e6;
+    border:1px dashed #d8a251;
+    border-radius:6px;
+    padding:1px 8px;
+    font-size:0.9rem;
+  }
+  /* ---- Footer ---- */
+  footer{
+    text-align:center;
+    margin-top:34px;
+    color:var(--ink-faint);
+    font-size:0.85rem;
+    line-height:1.7;
+  }
+  footer .links{margin-bottom:8px;}
+  footer .links a{margin:0 8px;}
+  footer .copy{color:var(--ink-faint);}
+  /* ---- Print ---- */
+  @media print{
+    body{background:#fff;}
+    .card{box-shadow:none; border:none; padding:0;}
+    nav.toc{display:none;}
+    header.hero{border-bottom:1px solid #ccc;}
+    a{color:var(--ink);}
+  }
+  @media(max-width:620px){
+    header.hero h1{font-size:1.6rem;}
+    nav.toc ol{columns:1;}
+    .card{padding:12px 20px 28px;}
+    .wrap{padding:0 14px 60px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="brand">Mareo</span>
+  <h1>Support</h1>
+  <p class="app-label">Mareo Reminder and Tracking App</p>
+  <p class="effective">Last updated: September 10, 2026</p>
+</header>
+
+<div class="wrap">
+  <div class="card">
+
+    <div class="intro-note">
+      We're here to help you keep reminders, routines, and follow-ups organized. This page answers
+      the questions the app is asked most often, and says where to write if yours is not here.
+    </div>
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#what-is-mareo">What Mareo Is</a></li>
+        <li><a href="#where-data-lives">Where Your Records Live</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+        <li><a href="#backup">Backing Up and Moving Your Records</a></li>
+        <li><a href="#reminders">If Reminders Are Not Arriving</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <section class="sec" id="what-is-mareo">
+      <h2 class="sec-title">What Mareo Is</h2>
+      <p>Mareo is a reminder and tracking app. You enter your aircraft, their components, the intervals you follow and the hours you fly; the app keeps the countdowns, shows what is overdue and what is coming due, and reminds you before a date arrives.</p>
+      <p>It is not an official authority, a regulator or a certifying body, and it issues no approvals or official determinations. Every due date, interval and life limit in it came from you, and has to be checked by you against the official documentation and a qualified technician. Never skip or delay an inspection because the app did or did not remind you — a reminder's presence, absence or timing decides nothing.</p>
+    </section>
+
+    <section class="sec" id="where-data-lives">
+      <h2 class="sec-title">Where Your Records Live</h2>
+      <p>This version of Mareo runs entirely on your device. There is no account to create, no sign-in, and no server. The records you enter are written to storage on this device and are never sent to us or to anyone else.</p>
+      <p>That has a consequence worth stating plainly rather than leaving to be discovered: we never receive your records, so we cannot read them, correct them, produce them on request, or put them back if they are gone. There would be nothing on our side to look up. It also means losing the device loses the records — your own export is the only copy that survives it.</p>
+      <p>Reminders are scheduled by iOS on this device. Nothing is registered with any server, and no push token is created.</p>
+    </section>
+
+    <section class="sec" id="faq">
+      <h2 class="sec-title">Frequently Asked Questions</h2>
+
+      <h3 class="q">How do I add a new tracker item?</h3>
+      <p>From the main screen, tap the "+" button and enter the details of the item you want to track.</p>
+
+      <h3 class="q">How do reminders work?</h3>
+      <p>Mareo tracks your schedules and timelines, then notifies you when items are due or approaching.</p>
+
+      <h3 class="q">Where is my data stored?</h3>
+      <p>On this device, and nowhere else. There is no account and no server: your records are written to this device's storage and are never sent anywhere. That also means losing the device loses the data, so take an export from Settings and keep it somewhere safe.</p>
+
+      <h3 class="q">How do I export or back up my data?</h3>
+      <p>Go to Settings and tap Export Data. On this version that file is your only backup — nothing is stored anywhere else — so take one regularly and keep it somewhere you control.</p>
+
+      <h3 class="q">Do my records move to a new device?</h3>
+      <p>Not on their own. Your records live on this device only, so moving to a new phone means moving the file yourself: go to Settings, tap Export Data, keep the file somewhere you control, then restore it from Settings on the new device. Syncing between devices is something we are working on.</p>
+
+      <h3 class="q">Can I share this with my team?</h3>
+      <p>Not yet. This version is built for one person on one device — there are no accounts and no shared access. If you need to hand your records to someone else, export the file and send it to them; they can restore it in their own copy of the app. Shared access is something we are working on.</p>
+
+      <h3 class="q">Is Mareo an official authority or professional service?</h3>
+      <p>No. Mareo is an organizational app for reminders and tracking only. It does not provide official determinations or professional advice.</p>
+    </section>
+
+    <section class="sec" id="backup">
+      <h2 class="sec-title">Backing Up and Moving Your Records</h2>
+      <p>Settings &gt; Export Data writes everything the file can hold into a single JSON file and hands it to the iOS share sheet, so you can save it wherever you keep your own files. Settings &gt; Restore from Backup reads one back. Those two controls are the whole of it: there is no copy anywhere else, and no one to ask for one.</p>
+      <p>Know what the export contains before you rely on it. It carries the records you enter — aircraft, components, maintenance tasks, flight, maintenance and defect logs, the parts shelf, and notes. What it does NOT put back is: aircraft cover photos; your notification history; the photo and document files themselves; and the record of every change you saved. Two more travel in the file and are not applied on restore: the record of your photos and documents; and the activity history, with its comments and tasks. If those matter to you, keep a device backup as well.</p>
+      <p>One thing about the file itself: it is plain readable text, not encrypted. That is deliberate — it means you can open it, check it, and restore it anywhere without depending on us — but it also means anyone who gets the file can read everything in it. Keep it somewhere you control, and think before sending it to anyone, including us.</p>
+    </section>
+
+    <section class="sec" id="reminders">
+      <h2 class="sec-title">If Reminders Are Not Arriving</h2>
+      <p>Reminders are delivered by iOS, and iOS delivers them only if you have allowed notifications for Mareo. If nothing is arriving, there are two places to look. First, the iOS Settings app, under Notifications, where permission is granted per app — until it is allowed there, none of these arrive. Second, Mareo's own Settings screen, where the Notifications card carries Maintenance Reminders, Component Alerts, System Notifications, Reminder Frequency, Days Before Due, Reminder Time and Quiet Hours; a reminder can be switched off, scheduled further ahead, or delayed into quiet hours from there.</p>
+      <p>If reminders arrive but not for the item you expected, the item itself is the next place to check: reminders are generated only from what you have entered, so an item with no interval and no due date has nothing to remind you about.</p>
+      <p>We do not guarantee that any reminder will be generated, delivered or on time. Device settings and operating-system behaviour outside our control can delay or prevent delivery, which is the reason the app is a tracking aid and not something to decide by.</p>
+    </section>
+
+    <section class="sec" id="contact">
+      <h2 class="sec-title">Contact</h2>
+      <p>If your question is not answered above, write to us. Say what you were doing, what you expected, and what happened instead, and include your device model and iOS version — that is usually what tells us where to look.</p>
+      <p>Please do not attach your export file unless we ask for it. It is plain readable text and it contains your records.</p>
+      <div class="contact-block">Email: <a href="mailto:mareo.app@gmail.com">mareo.app@gmail.com</a>
+Mustafa Erol
+Türkiye</div>
+      <p>See also the <a href="privacy.html">Privacy Policy</a> and the <a href="terms.html">Terms of Service</a>.</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <span aria-hidden="true">&middot;</span>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <div class="copy">&copy; 2024-2026 Mustafa Erol &middot; Made with care in Türkiye</div>
+  </footer>
+</div>
+
+</body>
+</html>
