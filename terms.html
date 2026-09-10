@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="description" content="Terms of Service for Mareo — a general reminder and tracking app.">
+<title>Terms of Service — Mareo</title>
+<style>
+  :root{
+    --bg:#f5f6f8;
+    --page:#ffffff;
+    --ink:#1c2530;
+    --ink-soft:#5a6573;
+    --ink-faint:#8a929e;
+    --accent:#2f6fb0;
+    --accent-soft:#eaf1f9;
+    --line:#e3e7ec;
+    --line-soft:#eef1f4;
+    --note-bg:#f7f9fb;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; padding:0;
+    background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65; font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{
+    max-width:760px; margin:0 auto; padding:0 22px 80px;
+  }
+  /* ---- Header ---- */
+  header.hero{
+    background:var(--page);
+    border-bottom:1px solid var(--line);
+    text-align:center;
+    padding:54px 22px 40px;
+  }
+  header.hero .brand{
+    display:inline-block;
+    font-size:0.78rem; font-weight:600; letter-spacing:1.4px;
+    text-transform:uppercase; color:var(--accent);
+    background:var(--accent-soft);
+    padding:5px 14px; border-radius:20px;
+    margin-bottom:18px;
+  }
+  header.hero h1{
+    font-size:2rem; margin:0 0 10px; letter-spacing:.2px; line-height:1.2;
+  }
+  header.hero .app-label{
+    color:var(--ink-soft); font-size:1rem; margin:0 0 6px;
+  }
+  header.hero .effective{
+    color:var(--ink-faint); font-size:0.85rem; letter-spacing:.3px; margin:0;
+  }
+  /* ---- Card ---- */
+  .card{
+    background:var(--page);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    margin-top:30px;
+    padding:14px 30px 34px;
+    box-shadow:0 1px 2px rgba(20,30,45,.04);
+  }
+  /* ---- Intro note ---- */
+  .intro-note{
+    background:var(--note-bg);
+    border:1px solid var(--line);
+    border-left:4px solid var(--accent);
+    border-radius:10px;
+    padding:14px 18px;
+    margin:22px 0 8px;
+    font-size:0.94rem;
+    color:var(--ink-soft);
+  }
+  /* ---- TOC ---- */
+  nav.toc{
+    margin:24px 0 4px;
+    padding:18px 22px;
+    background:var(--note-bg);
+    border:1px solid var(--line-soft);
+    border-radius:10px;
+  }
+  nav.toc h2{
+    font-size:0.78rem; text-transform:uppercase; letter-spacing:1px;
+    color:var(--ink-faint); margin:0 0 10px; font-weight:700;
+  }
+  nav.toc ol{
+    margin:0; padding-left:22px;
+    columns:2; column-gap:30px;
+  }
+  nav.toc li{margin:4px 0; break-inside:avoid; font-size:0.9rem;}
+  nav.toc a{color:var(--ink-soft);}
+  nav.toc a:hover{color:var(--accent);}
+  /* ---- Sections ---- */
+  section.sec{
+    padding:26px 0 4px;
+    border-top:1px solid var(--line-soft);
+    scroll-margin-top:20px;
+  }
+  section.sec:first-of-type{border-top:none;}
+  section.sec h2.sec-title{
+    font-size:1.18rem; margin:0 0 10px; color:var(--ink);
+    line-height:1.35;
+  }
+  section.sec h2.sec-title .num{
+    color:var(--accent); font-weight:700; margin-right:8px;
+  }
+  section.sec p{
+    margin:0 0 12px; color:var(--ink-soft); font-size:0.97rem;
+  }
+  section.sec p:last-child{margin-bottom:0;}
+  section.sec p.legal-caps{
+    font-size:0.92rem; color:var(--ink); line-height:1.7;
+  }
+  .contact-block{
+    background:var(--note-bg);
+    border:1px solid var(--line-soft);
+    border-radius:10px;
+    padding:16px 18px;
+    margin-top:6px;
+    font-size:0.95rem;
+    line-height:1.8;
+    color:var(--ink-soft);
+    white-space:pre-line;
+  }
+  /* ---- Footer ---- */
+  footer{
+    text-align:center;
+    margin-top:34px;
+    color:var(--ink-faint);
+    font-size:0.85rem;
+    line-height:1.7;
+  }
+  footer .links{margin-bottom:8px;}
+  footer .links a{margin:0 8px;}
+  footer .copy{color:var(--ink-faint);}
+  /* ---- Print ---- */
+  @media print{
+    body{background:#fff;}
+    .card{box-shadow:none; border:none; padding:0;}
+    nav.toc{display:none;}
+    header.hero{border-bottom:1px solid #ccc;}
+    a{color:var(--ink);}
+  }
+  @media(max-width:620px){
+    header.hero h1{font-size:1.6rem;}
+    nav.toc ol{columns:1;}
+    .card{padding:12px 20px 28px;}
+    .wrap{padding:0 14px 60px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="brand">Mareo</span>
+  <h1>Terms of Service</h1>
+  <p class="app-label">Mareo Reminder and Tracking App</p>
+  <p class="effective">Effective Date: September 8, 2026</p>
+</header>
+
+<div class="wrap">
+  <div class="card">
+
+    <div class="intro-note">
+      Please read these Terms of Service carefully. They govern your use of Mareo, a general
+      reminder and tracking app. By using the App, you agree to the terms below.
+    </div>
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#acceptance">Acceptance of Terms</a></li>
+        <li><a href="#service-description">Description of Service</a></li>
+        <li><a href="#not-authority">Not Professional or Official Authority</a></li>
+        <li><a href="#no-professional-advice">No Professional Advice</a></li>
+        <li><a href="#user-responsibilities">User Responsibilities</a></li>
+        <li><a href="#user-verification">Your Responsibility to Verify</a></li>
+        <li><a href="#no-reliance">No Reliance for Safety-Critical Decisions</a></li>
+        <li><a href="#no-airworthiness-determination">No Airworthiness or Compliance Determination</a></li>
+        <li><a href="#assumption-indemnity">Assumption of Risk and Indemnification</a></li>
+        <li><a href="#intellectual-property">Intellectual Property</a></li>
+        <li><a href="#warranties">Disclaimer of Warranties</a></li>
+        <li><a href="#liability">Limitation of Liability</a></li>
+        <li><a href="#backup">Data Backup and Availability</a></li>
+        <li><a href="#termination">Changes to the App</a></li>
+        <li><a href="#law">Governing Law</a></li>
+        <li><a href="#contact">Contact Information</a></li>
+      </ol>
+    </nav>
+    <section class="sec" id="acceptance">
+      <h2 class="sec-title"><span class="num">1.</span>Acceptance of Terms</h2>
+      <p>By downloading, installing, or using Mareo ("the App"), you agree to these Terms of Service. If you do not agree, do not use the App.</p>
+    </section>
+
+    <section class="sec" id="service-description">
+      <h2 class="sec-title"><span class="num">2.</span>Description of Service</h2>
+      <p>Mareo is a reminder and tracking tool for planning and logging recurring activities, schedules, and records. The App is intended for organization and follow-up purposes only.</p>
+    </section>
+
+    <section class="sec" id="not-authority">
+      <h2 class="sec-title"><span class="num">3.</span>Not Professional or Official Authority</h2>
+      <p>Mareo is not a government service, regulator, certifying body, or official authority. Mareo does not issue official approvals, certifications, compliance determinations, or legally binding instructions.</p>
+    </section>
+
+    <section class="sec" id="no-professional-advice">
+      <h2 class="sec-title"><span class="num">4.</span>No Professional Advice</h2>
+      <p>Information in the App is provided for informational and organizational purposes only and does not constitute professional advice. This includes, without limitation, technical, aviation, medical, legal, tax, accounting, or safety advice.</p>
+    </section>
+
+    <section class="sec" id="user-responsibilities">
+      <h2 class="sec-title"><span class="num">5.</span>User Responsibilities</h2>
+      <p>You are responsible for the accuracy of data you enter, your decisions, and any actions you take based on App content. You should independently verify important information with appropriate official sources or qualified professionals when needed.</p>
+    </section>
+
+    <section class="sec" id="user-verification">
+      <h2 class="sec-title"><span class="num">6.</span>Your Responsibility to Verify</h2>
+      <p>You are solely responsible for confirming all maintenance items, intervals, due dates, and component life limits against the official manufacturer documentation, applicable regulations, and a qualified, certified maintenance technician. The reminders and calculations in the App are informational organizational aids only and must not be relied upon as the sole basis for any maintenance, operational, or safety decision.</p>
+    </section>
+
+    <section class="sec" id="no-reliance">
+      <h2 class="sec-title"><span class="num">7.</span>No Reliance for Safety-Critical Decisions</h2>
+      <p>Do not rely on the App — or on the presence, absence, timing, or silence of any reminder — to decide whether any maintenance, inspection, or other action is due, complete, or unnecessary. Reminders are convenience prompts generated solely from data you enter. Never skip, delay, or forgo any inspection, maintenance, or professional consultation because the App did or did not remind you. The App is a general reminder and tracking tool; it is not designed or intended for use in critical, emergency, or real-time decision-making, for preserving safety, or for meeting any regulatory or legal record-keeping obligation. We do not guarantee that any reminder, alert, or notification will be generated, delivered, received, or on time — device settings, operating-system behavior, and network conditions outside our control can prevent or delay delivery.</p>
+    </section>
+
+    <section class="sec" id="no-airworthiness-determination">
+      <h2 class="sec-title"><span class="num">8.</span>No Airworthiness or Compliance Determination</h2>
+      <p>The App does not determine, certify, verify, or guarantee airworthiness, regulatory compliance, or fitness for flight or operation. All such determinations remain the sole and exclusive responsibility of the operator, the pilot-in-command, and certified maintenance personnel, in accordance with applicable law and the official records.</p>
+    </section>
+
+    <section class="sec" id="assumption-indemnity">
+      <h2 class="sec-title"><span class="num">9.</span>Assumption of Risk and Indemnification</h2>
+      <p>You assume all risk arising from your use of, or reliance on, the App. To the maximum extent permitted by applicable law, you agree to indemnify and hold harmless Mustafa Erol, the developer of the App, from any claims, damages, losses, or expenses arising out of your use of the App or any maintenance, operational, or safety decision made in connection with it.</p>
+    </section>
+
+    <section class="sec" id="intellectual-property">
+      <h2 class="sec-title"><span class="num">10.</span>Intellectual Property</h2>
+      <p>All content, features, software, and branding of Mareo are owned by Mustafa Erol and are protected by applicable intellectual property laws, except for the third-party open-source components the App includes — those remain the property of their own authors and are listed, with their licences, under Acknowledgements in the About screen.</p>
+    </section>
+
+    <section class="sec" id="warranties">
+      <h2 class="sec-title"><span class="num">11.</span>Disclaimer of Warranties</h2>
+      <p>The App is provided "AS IS" and "AS AVAILABLE," without warranty of any kind. To the maximum extent permitted by applicable law, we disclaim all warranties, whether express or implied, including any implied warranties of merchantability, fitness for a particular purpose, and non-infringement, and any warranty as to the accuracy, completeness, timeliness, or reliability of any data, reminder, calculation, or other output of the App. Some jurisdictions do not allow the exclusion of certain implied warranties, so some of these exclusions may not apply to you.</p>
+    </section>
+
+    <section class="sec" id="liability">
+      <h2 class="sec-title"><span class="num">12.</span>Limitation of Liability</h2>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW: the App is provided "AS IS" and "AS AVAILABLE" without warranties of any kind; we do not guarantee uninterrupted or error-free operation; and we are not liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of profits, data, or business opportunity. Nothing in these Terms excludes or limits liability that cannot be excluded under applicable law, including mandatory consumer rights. Where liability may be limited, our aggregate liability is limited to the amount you paid for the App in the twelve (12) months before the event giving rise to liability.</p>
+    </section>
+
+    <section class="sec" id="backup">
+      <h2 class="sec-title"><span class="num">13.</span>Data Backup and Availability</h2>
+      <p>This version of the App keeps your data on your device and nowhere else. That makes your own export the only backup there is, so take one regularly (Settings &gt; Export Data) and keep the file somewhere you control.</p>
+      <p>Know what the export contains before you rely on it. It carries the records you enter — aircraft, components, maintenance tasks, flight, maintenance and defect logs, the parts shelf, and notes. It does not carry your suppliers, your quality reports, your aircraft cover photos, your reminder preferences, comments and assigned tasks, or your saved settings including the signature used on log cards. Photo and document rows travel in the file but the image files themselves do not. If those matter to you, keep a device backup as well.</p>
+      <p>We are not responsible for loss of data caused by device failure or loss, by deleting the App, by an operating-system or platform change, or by your own actions. We cannot recover your records for you, because we never had a copy.</p>
+    </section>
+
+    <section class="sec" id="termination">
+      <h2 class="sec-title"><span class="num">14.</span>Changes to the App</h2>
+      <p>There is nothing here for us to suspend or terminate. The App runs entirely on your device and needs no account, licence check or service from us to keep working, so we cannot switch it off and we cannot lock you out of your own records.</p>
+      <p>We may change the App in later versions, or stop publishing new ones. A version already installed on your device keeps working either way.</p>
+    </section>
+
+    <section class="sec" id="law">
+      <h2 class="sec-title"><span class="num">15.</span>Governing Law</h2>
+      <p>These Terms are governed by the laws of the Republic of Türkiye, without regard to conflict of law principles. Any disputes shall be resolved in the courts of Istanbul, Türkiye, unless mandatory law in your place of residence requires otherwise.</p>
+    </section>
+
+    <section class="sec" id="contact">
+      <h2 class="sec-title"><span class="num">16.</span>Contact Information</h2>
+      <p>For questions regarding these Terms of Service:</p>
+      <p>Email: <a href="mailto:legal@mareo.app">legal@mareo.app</a></p>
+      <p>Mustafa Erol<br />
+      Istanbul, Türkiye</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <span aria-hidden="true">&middot;</span>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <div class="copy">&copy; 2024-2026 Mustafa Erol &middot; Made with care in Istanbul, Turkey</div>
+  </footer>
+</div>
+
+</body>
+</html>
